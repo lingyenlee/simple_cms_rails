@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  root 'demo#index'
+  #  get 'test/index'
+  #  get 'test/result'
   
+  root 'demo#index'
   get 'demo/index'
 
-  # get ':controller(/:action(/:id))'
+  get 'demo/hello'
+  get 'demo/other_hello'
+  get 'demo/lynda'
+
+  #  get ':controller(/:action(/:id))'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
