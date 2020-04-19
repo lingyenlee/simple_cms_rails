@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  get 'sections/index'
+  get 'sections/show'
+  get 'sections/delete'
+  get 'sections/edit'
+  get 'sections/new'
   root 'demo#index'
   
   resources :subjects do
@@ -6,8 +12,18 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
   
-  
+  resources :sections do
+    member do
+      get :delete
+    end
+  end
   
   get 'demo/index'
 
